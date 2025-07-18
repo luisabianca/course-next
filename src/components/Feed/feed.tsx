@@ -1,7 +1,11 @@
-export default function Feed() {
+import { Photo } from "@/actions/get-photos";
+import FeedPhotos from "./feed-photos";
+
+export default function Feed({photos}: {photos: Photo[]}) { 
   return (
-    <>
-      Feed
-    </>
+    <div>
+      <FeedPhotos photos={photos}/>
+    </div>
+    
   )
 }
